@@ -1,0 +1,218 @@
+/* ====== FitZone Studio: Sporty Blue Theme ====== */
+
+:root {
+  --main-bg: #f3f8ff;
+  --main-text: #0b0b0b;
+  --accent: #00bfff;          /* neon blue */
+  --accent-hover: #40e0ff;
+  --dark-bg: #0b0f17;         /* deep black-blue */
+  --dark-card: #141a23;
+  --dark-text: #e9f2ff;
+}
+
+/* ====== Base ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--main-bg);
+  color: var(--main-text);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+* {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  background-color: var(--accent);
+  box-shadow: 0 2px 10px rgba(0, 191, 255, 0.5);
+}
+.navbar-brand {
+  color: #fff !important;
+}
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: #0b0f17 !important;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  background: url('images.pba/banner.pic.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background-attachment: fixed;
+  transition: filter 0.5s ease;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px var(--accent);
+}
+
+/* ====== Cards ====== */
+.card {
+  background-color: #fff;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+}
+
+/* ====== Buttons ====== */
+.btn-warning {
+  background-color: var(--accent);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-warning:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* ====== Footer ====== */
+footer {
+  background-color: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  transition: background-color 0.5s ease;
+}
+
+/* ====== Dark Mode ====== */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark-mode .navbar {
+  background-color: #000 !important;
+  box-shadow: 0 2px 10px rgba(0, 191, 255, 0.6);
+}
+
+body.dark-mode .card {
+  background-color: var(--dark-card);
+  color: var(--dark-text);
+  border: 1px solid #1f2b38;
+}
+
+body.dark-mode .hero {
+  filter: brightness(0.7);
+}
+
+body.dark-mode footer {
+  background-color: #000;
+  color: var(--dark-text);
+}
+
+/* ====== Inputs, Labels, and Forms ====== */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #1a1f2a !important;
+  color: #e9f2ff !important;
+  border: 1px solid #2e3b4d !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #b0bcd1 !important;
+}
+
+body.dark-mode label,
+body.dark-mode .form-label {
+  color: var(--dark-text) !important;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+/* ====== Modal Fix for Dark Mode ====== */
+body.dark-mode .modal-content {
+  background-color: #141a23;
+  color: #e9f2ff;
+  border: 1px solid #2e3b4d;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  background-color: #1a1f2a;
+  border: none;
+}
+
+body.dark-mode .btn-success {
+  background-color: #00b36b !important;
+  color: #fff !important;
+  border: none;
+}
+body.dark-mode .btn-success:hover {
+  background-color: #00d981 !important;
+}
+
+/* ====== Alerts (for JS feedback) ====== */
+.alert {
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
+}
+
+/* ====== Neon Glow Animation (when toggling theme) ====== */
+body.dark-mode .navbar,
+body.dark-mode footer,
+body.dark-mode .btn-warning {
+  box-shadow: 0 0 15px var(--accent);
+}
+/* ====== Navy Labels for Forms in Dark Mode ====== */
+body.dark-mode label,
+body.dark-mode .form-label {
+  color: #054e96 !important; /* neon navy blue */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+/* ====== Theme Toggle Button Styling ====== */
+#themeToggle {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 5px 10px;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+  background-color: var(--accent-hover);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* ====== Dark Mode Toggle Button Adjustments ====== */
+body.dark-mode #themeToggle {
+  background-color: #141a23;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
+}
+
+body.dark-mode #themeToggle:hover {
+  background-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+}
